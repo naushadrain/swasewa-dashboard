@@ -1,0 +1,74 @@
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: #1a1a2e;
+    color: white;
+    position: fixed;
+    padding: 20px;
+}
+
+.sidebar-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 12px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-menu li:hover,
+.sidebar-menu .active {
+    background: #0f3460;
+    border-radius: 5px;
+}
+
+.logout {
+    color: #ff4757;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 240px;
+    padding: 20px;
+}
+
+/* Stats Cards */
+.stats-container {
+    display: flex;
+    gap: 20px;
+}
+
+.stats-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stats-card i {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* Order Status Table */
+.order-status {
+    margin-top: 30px;
+}
+
+.table {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
