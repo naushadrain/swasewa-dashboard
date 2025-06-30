@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { db } from "../firebase/firebase";
-import Sidebar from "./Sidebar";
-import TopNavbar from "./TopNavbar";
+import { db } from "../../firebase/firebase";
+import Sidebar from "../temp/Sidebar";
+import TopNavbar from "../temp/TopNavbar";
 import { useLocation } from "react-router-dom";
 
 const allTags = [

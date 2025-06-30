@@ -232,3 +232,22 @@ body {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
+
+
+/* Add this to your existing Dashboard.css file */
+
+.doctor-card .card-img-top {
+  height: 200px;
+  object-fit: cover; /* Ensures images cover the area without distortion */
+  border-bottom: 1px solid #eee;
+}
+
+.doctor-card .carousel-indicators {
+    margin-bottom: -0.5rem; /* Pulls indicators slightly down for better look */
+}
+
+.doctor-card .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+}

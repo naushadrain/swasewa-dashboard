@@ -1,14 +1,18 @@
 import React, { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth"; // Removed unused sendPasswordResetEmail
 import { auth } from "../firebase/firebase";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"; // <-- SOLUTION: Import Link here
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Dashboard.css";
+// Modal, Button, and Form are no longer needed if you removed the modal
+// import { Modal, Button, Form } from "react-bootstrap"; 
 
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  // The 'successMessage' state can be removed if it's only for the reset password flow
+  // const [successMessage, setSuccessMessage] = useState(""); 
   const [touched, setTouched] = useState({ email: false, password: false });
 
   const navigate = useNavigate();
@@ -28,12 +32,16 @@ function LoginPage() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      alert("✅ Login Successful!");
+      // The alert can be removed for a better user experience since you navigate right away
+      // alert("✅ Login Successful!"); 
       navigate("/dashboard");
     } catch (error) {
       setErrorMessage("❌ Login Failed! " + error.message);
     }
   };
+
+  // All modal-related states and functions can be removed from this component
+  // as they now live in the ForgotPasswordPage.js component.
 
   return (
     <div className="container-fluid">
@@ -49,8 +57,11 @@ function LoginPage() {
             <h3 className="mb-4 text-center">Login</h3>
             {errorMessage && <p className="text-danger">{errorMessage}</p>}
 
+            {/* You can remove the successMessage display as it's not set here anymore */}
+            {/* {successMessage && <p className="text-success">{successMessage}</p>} */}
+
             <form noValidate onSubmit={handleLogin}>
-              {/* Email */}
+              {/* Email Input */}
               <div className="mb-3">
                 <label htmlFor="email" className="form-label">Email Address</label>
                 <input
@@ -61,11 +72,12 @@ function LoginPage() {
                   placeholder="Enter email"
                   onChange={(e) => setEmail(e.target.value)}
                   onBlur={() => setTouched((prev) => ({ ...prev, email: true }))}
+                  required
                 />
                 <div className="invalid-feedback">Please enter a valid email address.</div>
               </div>
 
-              {/* Password */}
+              {/* Password Input */}
               <div className="mb-3">
                 <label htmlFor="password" className="form-label">Password</label>
                 <input
@@ -76,6 +88,7 @@ function LoginPage() {
                   placeholder="Enter password"
                   onChange={(e) => setPassword(e.target.value)}
                   onBlur={() => setTouched((prev) => ({ ...prev, password: true }))}
+                  required
                 />
                 <div className="invalid-feedback">Password is required.</div>
               </div>
@@ -86,7 +99,9 @@ function LoginPage() {
                   <input type="checkbox" className="form-check-input" id="rememberMe" />
                   <label className="form-check-label" htmlFor="rememberMe">Remember Me</label>
                 </div>
-                {/* <a href="/forgot" className="forgot-password">Forgot Password?</a> */}
+                <Link to="/forgot-password" className="forgot-password">
+                  Forgot Password?
+                </Link>
               </div>
 
               {/* Submit */}

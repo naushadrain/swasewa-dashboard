@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { collection, onSnapshot } from "firebase/firestore";
-import { db } from "../firebase/firebase";
-import TopNavbar from "./TopNavbar";
-import Sidebar from "./Sidebar";
+import { db } from "../../firebase/firebase";
+import TopNavbar from "../temp/TopNavbar";
+import Sidebar from "../temp/Sidebar";
 import { useLocation } from "react-router-dom";
-import "../styles/Dashboard.css";
+import "../../styles/Dashboard.css";
 
 const AllHospitalsPage = () => {
   const location = useLocation();

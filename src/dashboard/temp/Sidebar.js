@@ -26,9 +26,8 @@ const Sidebar = ({ activePath }) => {
             <i className="fa fa-chevron-down"></i>
           </a>
           <ul
-            className={`collapse list-unstyled ps-3 mt-2 ${
-              ["/doctors", "/add-doctor"].includes(activePath) ? "show" : ""
-            }`}
+            className={`collapse list-unstyled ps-3 mt-2 ${["/doctors", "/add-doctor"].includes(activePath) ? "show" : ""
+              }`}
             id="doctorMenu"
           >
             <li className={activePath === "/doctors" ? "active" : ""}>
@@ -54,9 +53,8 @@ const Sidebar = ({ activePath }) => {
             <i className="fa fa-chevron-down"></i>
           </a>
           <ul
-            className={`collapse list-unstyled ps-3 mt-2 ${
-              ["/pharma-products", "/add-pharma-product"].includes(activePath) ? "show" : ""
-            }`}
+            className={`collapse list-unstyled ps-3 mt-2 ${["/pharma-products", "/add-pharma-product"].includes(activePath) ? "show" : ""
+              }`}
             id="pharmaMenu"
           >
             <li className={activePath === "/pharma-products" ? "active" : ""}>
@@ -82,9 +80,8 @@ const Sidebar = ({ activePath }) => {
             <i className="fa fa-chevron-down"></i>
           </a>
           <ul
-            className={`collapse list-unstyled ps-3 mt-2 ${
-              ["/hospital", "/add-hospital"].includes(activePath) ? "show" : ""
-            }`}
+            className={`collapse list-unstyled ps-3 mt-2 ${["/hospital", "/add-hospital"].includes(activePath) ? "show" : ""
+              }`}
             id="hospitalMenu"
           >
             <li className={activePath === "/hospital" ? "active" : ""}>
@@ -95,6 +92,12 @@ const Sidebar = ({ activePath }) => {
             </li>
           </ul>
         </li>
+
+        {/* Appoints */}
+        <li className={activePath === "/appoint" ? "active" : ""}>
+          <Link to="/appoint"><i className="fa fa-users me-2"></i> Appoints</Link>
+        </li>
+
 
         {/* Users */}
         <li className={activePath === "/users" ? "active" : ""}>

@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { signOut } from "firebase/auth";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import { collection, deleteDoc, doc, onSnapshot } from "firebase/firestore";
-import { db, auth } from "../firebase/firebase";
+import { db, auth } from "../../firebase/firebase";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
-import "../styles/Dashboard.css";
-import TopNavbar from "./TopNavbar";
-import Sidebar from "./Sidebar";
+import "../../styles/Dashboard.css";
+import TopNavbar from "../temp/TopNavbar";
+import Sidebar from "../temp/Sidebar";
 
 const AllPharmaProductsPage = () => {
     const [products, setProducts] = useState([]);

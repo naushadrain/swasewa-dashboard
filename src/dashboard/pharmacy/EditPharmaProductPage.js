@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate, Link, useLocation } from "react-router-dom";
 import { signOut } from "firebase/auth";
-import { auth, db } from "../firebase/firebase";
+import { auth, db } from "../../firebase/firebase";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
-import "../styles/Dashboard.css";
-import TopNavbar from "./TopNavbar";
-import Sidebar from "./Sidebar";
+import "../../styles/Dashboard.css";
+import TopNavbar from "../temp/TopNavbar";
+import Sidebar from "../temp/Sidebar";
 
 const EditPharmaProductPage = () => {
     const { id } = useParams();

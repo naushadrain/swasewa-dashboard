@@ -6,8 +6,8 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import "../styles/Dashboard.css";
-import Sidebar from "./Sidebar";
-import TopNavbar from "./TopNavbar";
+import Sidebar from "./temp/Sidebar";
+import TopNavbar from "./temp/TopNavbar";
 
 const UserPage = () => {
     const navigate = useNavigate();

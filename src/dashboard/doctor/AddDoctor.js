@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useDropzone } from "react-dropzone";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { db } from "../firebase/firebase";
-import TopNavbar from "./TopNavbar";
-import Sidebar from "./Sidebar";
+import { db, storage } from '../../firebase/firebase';
+import TopNavbar from "../temp/TopNavbar";
+import Sidebar from "../temp/Sidebar";
 import { useLocation } from "react-router-dom";
-import "../styles/Dashboard.css";
+import "../../styles/Dashboard.css";
 
 const AddDoctorPage = () => {
   const location = useLocation();

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { signOut } from "firebase/auth";
-import { auth, db } from "../firebase/firebase";
+import { auth, db } from "../../firebase/firebase";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import {
     collection,
@@ -12,7 +12,7 @@ import {
 } from "firebase/firestore";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
-import "../styles/Dashboard.css";
+import "../../styles/Dashboard.css";
 
 const PharmaProductPage = () => {
     const navigate = useNavigate();
