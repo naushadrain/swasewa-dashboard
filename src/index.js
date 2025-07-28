@@ -24,6 +24,9 @@ import "./styles/Dashboard.css";
 import ForgotPasswordPage from "./auth/ForgotPasswordPage";
 import ResetPasswordPage from "./auth/ResetPasswordPage";
 import AppointsPage from "./dashboard/appoint/Appoint";
+import CommonHealthIssues from "./dashboard/health_issues/CommonHealthIssue";
+import AddHealthIssue from "./dashboard/health_issues/AddHealthIssue";
+import EditHealthIssue from "./dashboard/health_issues/EditHealthIssue";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -64,6 +67,13 @@ root.render(
                         }
                     />
                     <Route path="/appoint" element={<ProtectedRoute><AppointsPage /></ProtectedRoute>}/>
+
+                    <Route path="/health/issues" element={<ProtectedRoute><CommonHealthIssues /></ProtectedRoute>}/>
+                    <Route path="/add-health-issue" element={<ProtectedRoute><AddHealthIssue /></ProtectedRoute>}/>
+                    <Route path="/edit-health-issue/:id" element={<EditHealthIssue />} />
+
+
+
 
                     {/* Doctor Routes */}
                     <Route

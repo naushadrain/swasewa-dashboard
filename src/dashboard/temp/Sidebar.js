@@ -98,6 +98,33 @@ const Sidebar = ({ activePath }) => {
           <Link to="/appoint"><i className="fa fa-users me-2"></i> Appoints</Link>
         </li>
 
+        {/* Common Health Issues Menu */}
+        <li>
+          <a
+            data-bs-toggle="collapse"
+            href="#healthMenu"
+            role="button"
+            aria-expanded={["/health/issues", "/add-health-issue"].includes(activePath)}
+            aria-controls="healthMenu"
+            className="d-flex align-items-center justify-content-between"
+          >
+            <span><i className="fa fa-heartbeat me-2"></i> Health Issues</span>
+            <i className="fa fa-chevron-down"></i>
+          </a>
+          <ul
+            className={`collapse list-unstyled ps-3 mt-2 ${["/health/issues", "/add-health-issue"].includes(activePath) ? "show" : ""}`}
+            id="healthMenu"
+          >
+            <li className={activePath === "/health/issues" ? "active" : ""}>
+              <Link to="/health/issues">All Health Issues</Link>
+            </li>
+            <li className={activePath === "/add-health-issue" ? "active" : ""}>
+              <Link to="/add-health-issue">Add Health Issue</Link>
+            </li>
+          </ul>
+        </li>
+
+
 
         {/* Users */}
         <li className={activePath === "/users" ? "active" : ""}>
