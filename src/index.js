@@ -27,6 +27,8 @@ import AppointsPage from "./dashboard/appoint/Appoint";
 import CommonHealthIssues from "./dashboard/health_issues/CommonHealthIssue";
 import AddHealthIssue from "./dashboard/health_issues/AddHealthIssue";
 import EditHealthIssue from "./dashboard/health_issues/EditHealthIssue";
+import HomePage from "./website/HomePage";
+import App from "./website/app";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -36,7 +38,8 @@ root.render(
             <Router>
                 <Routes>
                     {/* Public Routes */}
-                    <Route path="/" element={<LoginPage />} />
+                    <Route path="/" element={<App />} />
+                    <Route path="/admin-login" element={<LoginPage />} />
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/forgot-password" element={<ForgotPasswordPage />} /> {/* <-- Add this route */}
                     <Route path="/reset-password" element={<ResetPasswordPage />} />   {/* <-- Add this route */}
@@ -66,10 +69,10 @@ root.render(
                             </ProtectedRoute>
                         }
                     />
-                    <Route path="/appoint" element={<ProtectedRoute><AppointsPage /></ProtectedRoute>}/>
+                    <Route path="/appoint" element={<ProtectedRoute><AppointsPage /></ProtectedRoute>} />
 
-                    <Route path="/health/issues" element={<ProtectedRoute><CommonHealthIssues /></ProtectedRoute>}/>
-                    <Route path="/add-health-issue" element={<ProtectedRoute><AddHealthIssue /></ProtectedRoute>}/>
+                    <Route path="/health/issues" element={<ProtectedRoute><CommonHealthIssues /></ProtectedRoute>} />
+                    <Route path="/add-health-issue" element={<ProtectedRoute><AddHealthIssue /></ProtectedRoute>} />
                     <Route path="/edit-health-issue/:id" element={<EditHealthIssue />} />
 
 

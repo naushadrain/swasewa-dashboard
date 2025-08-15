@@ -1,0 +1,503 @@
+/* universal all class tag margin padding */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global font family fallback */
+body {
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    /* Background image settings */
+    background-image: url('../image/image.svg');
+    /* Replace with your actual image path */
+    background-size: cover;
+    /* Ensures the image covers the entire viewport */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    background-position: center;
+    /* Centers the image */
+
+}
+
+/* Headings (H1–H6) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Spans */
+span {
+    font-size: 1rem;
+}
+
+/* Optional: Emphasis on highlighted spans */
+span.highlight {
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+
+
+
+
+/* nav.css */
+.navbar {
+    background-color: #ffffff;
+    border-left: 2px solid #d0e2ff;
+    /* Light primary blue side border */
+    border-right: 2px solid #d0e2ff;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 50px;
+    /* Rounded full pill */
+    padding: 0.75rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand img {
+    max-width: 130px;
+    max-height: 60px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: #1c3f60;
+    margin-left: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #c54733;
+    /* Accent red from your design */
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2828, 63, 96, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+
+
+
+.service-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    max-height: 280px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+
+
+.achievement-section {
+    background:
+        linear-gradient(to right, #E9F5FF, #FFF6F4, #F7FBFF),
+        url('../image/image 110.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+    text-align: center;
+    border-radius: 20px;
+    margin: 40px;
+}
+
+.vertical-gradient-line {
+    width: 2px;
+    /* Thickness of the vertical line */
+    height: 164px;
+    /* Height of the vertical line */
+    background: linear-gradient(#EA5D39, #987077, #4682B4);
+    border: none;
+    border-radius: 2px;
+    /* Optional: rounded edges */
+}
+
+.achievement-title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #4682B4;
+    text-align: start;
+    padding-left: 40px;
+    margin: 0;
+}
+
+.achievement-box h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #000;
+}
+
+.achievement-box p {
+    color: #555;
+    font-size: 1rem;
+}
+
+
+
+.services-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    position: relative;
+    text-align: center;
+}
+
+.services-title {
+    position: relative;
+    z-index: 1;
+}
+
+.services-title h1 {
+    font-size: 90px;
+    margin: 0;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+}
+
+.services-title h1 span {
+    font-size: 40px;
+}
+
+.services-title .blue {
+    color: #396693;
+}
+
+.services-title .gradient-text {
+    /* background: linear-gradient(to right, #6e4b7a, #ff5e3a); */
+    background-color: #396693;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 70px;
+}
+
+.services-bg {
+    font-size: 90px;
+    font-weight: bold;
+    color: #e0e0e0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    z-index: 0;
+    white-space: nowrap;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+
+
+/* book appo */
+
+.main-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.info-section h2 {
+    font-weight: 700;
+}
+
+.info-section p {
+    color: #6c757d;
+}
+
+.check-icon {
+    color: green;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.get-app-btn {
+    background: linear-gradient(to right, #5a7de2, #f76a3c);
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+.image-wrapper {
+    position: relative;
+    max-width: 500px;
+}
+
+.doctor-img {
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    width: 520px;
+    height: 520px;
+}
+
+.calendar {
+    position: absolute;
+    bottom: -110px;
+    /* Adjust as needed for best visual fit */
+    right: 183px;
+    /* Adjust this too */
+    width: 375px;
+    /* Match your image dimension */
+    height: 325px;
+    background-image: url('../image/Calender.png');
+    background-size: contain;
+    /* or 'cover' */
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.accordion-item {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: none;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion-button {
+    background-color: #fff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    display: none;
+}
+
+.accordion-button .icon {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 12px;
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+.accordion-button.collapsed .icon::before {
+    content: "+";
+}
+
+.accordion-button:not(.collapsed) .icon::before {
+    content: "−";
+}
+
+.accordion-body {
+    padding: 0 1.25rem 1rem 2.3rem;
+    color: #555;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+.testimonial-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stars {
+    color: #f5c518;
+}
+
+.review-text {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.reviewer-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.reviewer-location {
+    color: #888;
+}
+
+
+
+
+
+
+.form-section {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.left-panel {
+    background: linear-gradient(135deg, #fbe9e7, #e3f2fd);
+    padding: 40px;
+}
+
+.left-panel h2 {
+    font-weight: 700;
+}
+
+.right-panel {
+    padding: 40px;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.btn-upload {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    border-radius: 10px;
+    padding: 8px 20px;
+    border: none;
+}
+
+.submit-btn {
+    /* background: linear-gradient(to right, #6a11cb, #f77062); */
+    background-color: #1c3f60;
+    color: white;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    width: 100%;
+}
+
+.form-check-label {
+    font-size: 0.95rem;
+}
+
+
+
+
+.footer {
+    background: linear-gradient(to bottom right, #fbe9e7, #e3f2fd);
+    padding: 60px 20px 30px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #111;
+}
+
+.footer h6 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer .contact-info i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.footer .social-icons a {
+    font-size: 1.4rem;
+    margin-right: 15px;
+    color: #000;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #444;
+}
