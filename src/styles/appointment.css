@@ -1,0 +1,187 @@
+/* ===== Appointment (Book Appo) ===== */
+
+:root {
+    --brand-blue: #5a7de2;
+    --brand-orange: #f76a3c;
+    --muted: #6c757d;
+}
+
+/* Layout */
+.main-container {
+    min-height: 80vh;
+    /* a bit shorter than full screen for better flow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(20px, 4vw, 50px);
+}
+
+/* Left column */
+.info-section h2 {
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+
+.info-section p {
+    color: var(--muted);
+    margin-bottom: .5rem;
+}
+
+.check-icon {
+    color: #22aa55;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+/* CTA button */
+.get-app-btn {
+    background: linear-gradient(90deg, var(--brand-blue), var(--brand-orange));
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: .2px;
+    transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+}
+
+.get-app-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .10);
+    opacity: .95;
+}
+
+/* Right column */
+.image-wrapper {
+    position: relative;
+    max-width: 560px;
+    /* prevent huge images on desktops */
+    width: 100%;
+}
+
+/* Make image responsive – no fixed height */
+.doctor-img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+    display: block;
+}
+.card .calendar{
+    top: -12%;
+    right: 80%;
+}
+/* Calendar overlay card */
+.calendar {
+    position: absolute;
+    bottom: -12%;
+    right: 60%;
+    width: clamp(230px, 45%, 360px);
+    aspect-ratio: 5 / 4;
+    /* keeps shape without fixed height */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, .16);
+    background-color: #fff0;
+    /* transparent so only image shows */
+}
+
+/* ===== FAQ Accordion (kept from your original, with minor polish) ===== */
+.accordion-item {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: none;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accordion-button {
+    background-color: #fff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    display: none;
+}
+
+.accordion-button .icon {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 12px;
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+.accordion-button.collapsed .icon::before {
+    content: "+";
+}
+
+.accordion-button:not(.collapsed) .icon::before {
+    content: "−";
+}
+
+.accordion-body {
+    padding: 0 1.25rem 1rem 2.3rem;
+    color: #555;
+    background-color: #fff;
+}
+
+/* ===== Responsive Tweaks ===== */
+
+/* Mobile-first defaults above */
+
+/* sm ≥576px */
+@media (min-width: 576px) {
+    .main-container {
+        min-height: 70vh;
+    }
+}
+
+/* md ≥768px */
+@media (min-width: 768px) {
+    .main-container {
+        min-height: 72vh;
+    }
+
+    .calendar {
+        bottom: -12%;
+        right: 8%;
+    }
+}
+
+/* lg ≥992px */
+@media (min-width: 992px) {
+    .main-container {
+        min-height: 78vh;
+    }
+
+    .calendar {
+        bottom: -14%;
+        right: 6%;
+    }
+}
+
+/* xl ≥1200px */
+@media (min-width: 1200px) {
+    .calendar {
+        bottom: -16%;
+        right: 6%;
+    }
+}

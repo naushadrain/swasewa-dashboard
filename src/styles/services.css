@@ -1,0 +1,127 @@
+/* src/styles/services.css */
+
+/* Wrapper spacing */
+.services-wrap {
+    padding: 8px 0 24px;
+}
+
+/* Card base */
+.service-card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .06);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .04);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .06);
+    border-color: rgba(0, 0, 0, .1);
+}
+
+/* Consistent icon size */
+/* Icon chip */
+.service-icon-wrap {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e14b29, #3a4bdb);
+    color: #fff;
+    box-shadow: 0 8px 18px rgba(58, 75, 219, .18);
+}
+
+.service-icon {
+    font-size: 28px;
+    line-height: 1;
+}
+
+/* Equal-height behavior: title + text grow; button sits at bottom */
+.service-text {
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+/* Read-more behavior (mobile-first):
+   - Clamp text on small screens
+   - Expand when .expanded is set
+   - On md+ we show full text (see media query) */
+.service-text.clamped {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* show 3 lines on mobile */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.service-text.expanded {
+    -webkit-line-clamp: unset;
+}
+
+/* Styled read-more button */
+.btn-readmore {
+    border-radius: 999px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .04);
+}
+
+/* Reveal-on-scroll animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(14px);
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: all .45s ease;
+}
+
+/* --------- Breakpoints --------- */
+
+/* sm ≥576px */
+@media (min-width: 576px) {
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* md ≥768px — show full text and hide read-more */
+@media (min-width: 768px) {
+    .service-text.clamped {
+        -webkit-line-clamp: unset;
+        /* no clamp on md+ */
+    }
+
+    .btn-readmore {
+        display: none !important;
+    }
+}
+
+/* lg ≥992px */
+@media (min-width: 992px) {
+    .service-card {
+        padding: 22px;
+    }
+
+    .service-icon {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+/* xl ≥1200px */
+@media (min-width: 1200px) {
+    .service-card {
+        padding: 24px;
+    }
+}
