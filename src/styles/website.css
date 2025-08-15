@@ -196,37 +196,7 @@ span.highlight {
 }
 
 
-.testimonial-card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
 
-.stars {
-    color: #f5c518;
-}
-
-.review-text {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
-
-.profile-img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.reviewer-name {
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-
-.reviewer-location {
-    color: #888;
-}
 
 
 

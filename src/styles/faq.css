@@ -1,0 +1,100 @@
+/* ===== FAQ look & feel ===== */
+
+.faq-wrap {
+    padding-bottom: 1.5rem;
+}
+
+/* center the accordion with a comfortable max width */
+.faq-container {
+    max-width: 860px;
+}
+
+/* each item card */
+.faq-item.accordion-item {
+    border: 1px solid rgba(0, 0, 0, .08);
+    border-radius: 16px !important;
+    overflow: hidden;
+    /* keep rounded corners during expand animation */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .05);
+    margin-bottom: 14px;
+    background: #fff;
+}
+
+/* header button */
+.faq-item .accordion-button {
+    padding: 1rem 1.25rem 1rem 3.25rem;
+    /* space left for icon */
+    font-weight: 600;
+    color: #222;
+    background: #fff;
+    border-radius: 16px !important;
+    box-shadow: none;
+    position: relative;
+    transition: background-color .2s ease;
+}
+
+.faq-item .accordion-button:hover {
+    background-color: #fafbff;
+}
+
+.faq-item .accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+/* remove default caret */
+.faq-item .accordion-button::after {
+    display: none;
+}
+
+/* custom round gradient icon */
+.faq-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3a4bdb, #e14b29);
+    box-shadow: 0 6px 14px rgba(58, 75, 219, .22);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* plus / minus glyph via pseudo-element */
+.faq-icon::before {
+    content: "+";
+    color: #fff;
+    font-weight: 800;
+    line-height: 1;
+    font-size: 18px;
+}
+
+/* when expanded, show minus */
+.faq-item .accordion-button:not(.collapsed) .faq-icon::before {
+    content: "−";
+}
+
+/* body text */
+.faq-item .accordion-body {
+    padding: 0 1.25rem 1rem 3.25rem;
+    color: #555;
+    background: #fff;
+}
+
+/* ---------- Responsive tweaks ---------- */
+@media (max-width: 575.98px) {
+    .faq-item .accordion-button {
+        padding-left: 3rem;
+    }
+
+    .faq-item .accordion-body {
+        padding-left: 3rem;
+    }
+
+    .faq-icon {
+        left: .9rem;
+    }
+}

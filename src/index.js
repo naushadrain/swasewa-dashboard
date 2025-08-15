@@ -39,7 +39,7 @@ root.render(
                 <Routes>
                     {/* Public Routes */}
                     <Route path="/" element={<App />} />
-                    <Route path="/admin-login" element={<LoginPage />} />
+                    <Route path="/login" element={<LoginPage />} />
                     <Route path="/login" element={<LoginPage />} />
                     <Route path="/forgot-password" element={<ForgotPasswordPage />} /> {/* <-- Add this route */}
                     <Route path="/reset-password" element={<ResetPasswordPage />} />   {/* <-- Add this route */}

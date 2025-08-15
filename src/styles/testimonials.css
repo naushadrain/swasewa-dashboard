@@ -1,0 +1,36 @@
+.testimonial-card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .06);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, .06);
+}
+
+.stars {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+
+.review-text {
+    color: #4a4a4a;
+    line-height: 1.7;
+    margin: 0 auto;
+    max-width: 52ch;
+}
+
+.profile-img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
+}
+
+.reviewer-name {
+    font-weight: 600;
+}
+
+.reviewer-location {
+    color: #6c757d;
+    font-size: .95rem;
+}
